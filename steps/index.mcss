@@ -1,0 +1,54 @@
+@import './core.mcss';
+
+// Variables:
+// ========================================================================
+
+$m-steps_hd_li_width = 160px;
+$m-steps_hd_li_after_size = 8px;
+$m-steps_hd_li_before_margin = 10px;
+
+// Component:       `m-steps`
+// ========================================================================
+
+.m-steps {
+    .steps_hd {
+        padding: 10px 0 60px;
+        color: #999;
+        text-align: center;
+
+        > li {
+            width: $m-steps_hd_li_width;
+
+            &:after {
+                top: 32px;
+                left: 50%;
+                margin-left: -$m-steps_hd_li_after_size / 2;
+                $size: $m-steps_hd_li_after_size;
+                background: #d9d9d9;
+                $border-radius: 100%;
+            }
+        }
+
+        > li + li {
+            &:before {
+                top: 32px + $m-steps_hd_li_after_size / 2;
+                left: 50%;
+                margin-left: -($m-steps_hd_li_width - $m-steps_hd_li_before_margin - $m-steps_hd_li_after_size / 2);
+                width: $m-steps_hd_li_width - $m-steps_hd_li_after_size - $m-steps_hd_li_before_margin * 2;
+                border-top: 1px solid #d9d9d9;
+            }
+        }
+
+        > li.z-act {
+            color: $brand-primary;
+
+            &:after {
+                background: $brand-primary;
+            }
+
+            &:before {
+                border-color: $brand-primary;
+            }
+        }
+    }
+}

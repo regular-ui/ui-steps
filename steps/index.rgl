@@ -1,0 +1,16 @@
+<div class="m-steps {class}" z-dis={disabled} r-hide={!visible}>
+    <ul class="steps_hd">
+        {#list _list as item}
+        <li z-act={item_index <= current} z-dis={item.data.disabled} title={item.data.title} r-hide={!item.data.visible}>
+            {#if @(titleTemplate)}
+                {#inc @(titleTemplate)}
+            {#else}
+                <span>{item.data.title}</span>
+            {/if}
+        </li>
+        {/list}
+    </ul>
+    <div class="steps_bd">
+        {#inc this.$body}
+    </div>
+</div>

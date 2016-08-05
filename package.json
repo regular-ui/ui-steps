@@ -1,0 +1,16 @@
+{
+  "name": "rgui-ui-steps",
+  "description": "Regular UI - Steps",
+  "version": "0.2.0-alpha",
+  "author": "Rainfore <rainforest92@126.com>",
+  "main": "./index.js",
+  "repository": "regular-ui/ui-steps",
+  "homepage": "http://regular-ui.github.io",
+  "bugs": {"url": "http://github.com/regular-ui/ui-steps/issues"},
+  "license": "MIT",
+  "keywords": ["regular", "ui", "rgui", "steps"],
+  "tags": ["regular", "ui", "rgui", "steps"],
+  "dependencies": {
+    "rgui-ui-base": "^0.2.0-alpha.4"
+  }
+}

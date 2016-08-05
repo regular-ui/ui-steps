@@ -1,0 +1,41 @@
+// Variables:
+// ========================================================================
+
+$font-size-base ?= 14px;
+
+// Component:       `m-steps`
+// ========================================================================
+
+.m-steps {
+    .steps_hd {
+        @extend .f-lsn;
+        font-size: 0;
+        $box-sizing: border-box;
+
+        > li {
+            display: inline-block;
+            font-size: $font-size-base;
+            position: relative;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+            }
+        }
+
+        > li + li {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+            }
+        }
+
+        > li.z-act {}
+
+        > li.z-dis {
+            cursor: not-allowed;
+        }
+    }
+}
