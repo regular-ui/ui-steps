@@ -21,8 +21,7 @@ Regular UI - Steps, Step
 
 ## Steps（步骤条）
 
-- 基础示例+API: https://regular-ui.github.io/ui-steps/steps/index.html
-- 进阶案例: https://regular-ui.github.io/ui-steps/steps/case.html
+- 基础示例+进阶案例+API: https://regular-ui.github.io/ui-steps/steps/index.html
 
 ## Copyright and License
 
