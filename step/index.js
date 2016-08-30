@@ -18,11 +18,11 @@ const Step = Component.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             // @inherited selected: false,
             // @inherited disabled: false,
             title: '',
-        }, this.data);
+        });
         this.supr();
 
         // 没有$outer就直接报错

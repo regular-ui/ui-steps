@@ -19,11 +19,11 @@ const Steps = Component.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             _list: [],
             current: 0,
             titleTemplate: undefined,
-        }, this.data);
+        });
         this.supr();
         this.watch();
     },
