@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/docs.default.min.css">
 <link rel="stylesheet" href="../css/index.css">
 <!--[if lt IE9]>
 <script>
@@ -114,34 +114,36 @@
 
         <h2 id="API">API</h2>
 
-<h3 id="Class">Class</h3>
-<h4>Steps</h4>
-<p>继承自<strong>Component</strong>。</p>
-<p></p>
-<div id="j-class"></div>
 
-<h3 id="Options">Options</h3>
-<h4>new Steps()</h4>
-<table>
-    <thead>
-        <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
-    </thead>
-    <tbody>
-        
+    <h3 id="Class">Class</h3>
+    <h4>Steps</h4>
+    <p>继承自<strong></strong>。</p>
+    <p></p>
+    <div id="j-class"></div>
+
+    <h3 id="Options">Options</h3>
+    <h4>new Steps()</h4>
+    <table>
+        <thead>
+            <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
+        </thead>
+        <tbody>
             
-            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">Object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.current</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>当前步骤</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.titleTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"></td><td class="f-tac">outside @=&gt; inside</td><td>标题模板</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否显示</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
+                
             
-            <tr><td class="f-wsn"><code>data.current</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>当前步骤</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.titleTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"></td><td class="f-tac">outside @=&gt; inside</td><td>标题模板</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否显示</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
-            
-        
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
 <div id="j-options"></div>
 
 
@@ -232,7 +234,7 @@ var index = 0;
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<steps current={current}>\n    <step title=\"Step0\">Content0</step>\n    <step title=\"Step1\">Content1</step>\n    <step title=\"Step2\">Content2</step>\n    <step title=\"Step3\">Content3</step>\n</steps>\n<p><span>当前页：{current}</span></p>\n<a class=\"u-btn u-btn-info\" on-click={current -= 1}>上一页</a>\n<a class=\"u-btn u-btn-info\" on-click={current += 1}>下一页</a>";
+    var template = "<steps current={current}>\n    <step title=\"Step0\">Content0</step>\n    <step title=\"Step1\">Content1</step>\n    <step title=\"Step2\">Content2</step>\n    <step title=\"Step3\">Content3</step>\n</steps>\n<p><span>\u5F53\u524D\u9875\uFF1A{current}</span></p>\n<a class=\"u-btn u-btn-info\" on-click={current -= 1}>\u4E0A\u4E00\u9875</a>\n<a class=\"u-btn u-btn-info\" on-click={current += 1}>\u4E0B\u4E00\u9875</a>";
     var component = new RGUI.Component({
         template: template,
         data: { current: 2 }
