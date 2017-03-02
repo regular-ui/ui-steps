@@ -1,4 +1,4 @@
-import Steps from './steps';
-import Step from './step';
+import Steps from './src/steps';
+import Step from './src/step';
 
 export { Steps, Step };

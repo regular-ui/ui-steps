@@ -3,9 +3,9 @@ import template from './index.rgl';
 
 /**
  * @class Steps
- * @extend Component
+ * @extends Component
  * @description 该版本暂不支持可选择
- * @param {object}                  options.data                     =  绑定属性
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {number=0}                options.data.current            <=> 当前步骤
  * @param {string}                  options.data.titleTemplate      @=> 标题模板
  * @param {boolean=true}            options.data.visible             => 是否显示
@@ -32,7 +32,7 @@ const Steps = Component.extend({
      * @override
      */
     watch() {
-        this.$watch('current', (newValue, oldValue) => {
+        this.$watch('current', (current) => {
             /**
              * @event change 选择页改变时触发
              * @property {object} sender 事件发送对象
@@ -40,7 +40,7 @@ const Steps = Component.extend({
              */
             this.$emit('change', {
                 sender: this,
-                current: newValue,
+                current,
             });
         });
     },
